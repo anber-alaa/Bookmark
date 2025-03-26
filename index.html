@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <!-- favicon -->
+    <link rel="icon" href="./images/favicon3.png">
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="./css/stylesheet.css">
+</head>
+<body>
+
+    <main>
+        <section class="py-5">
+            <div class="container rounded-4">
+                <header class="text-center">
+                    <h1 class="d-inline-block">Bookmarker</h1>
+                </header>
+                <div class="content w-100 p-3 py-4 mt-5 mb-4 d-flex flex-column gap-4">
+                    <header class="text-center">
+                        <h3> <i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i class="fa-solid fa-bookmark"></i></h3>
+                    </header>
+
+                    <div id="alertMsg" class="alert alert-danger d-none"> All fields are required and must be valid</div>
+
+                    <!-- ? siteName -->
+                    <div class="mb-3">
+                        <label for="siteName" class="form-label fw-bold"><i class="fa-solid fa-book-bookmark"></i> Site Name</label>
+                        <input oninput="validationInputs(this , 'msgName')" type="text" class="form-control shadow-none" id="siteName" placeholder="Bookmark Name">
+                        <p id="msgName" class="text-danger fw-bold d-none">Site name must start with capital letter</p>
+                    </div>
+
+                    <!-- ? siteUrl -->
+                    <div class="mb-3 input-container">
+                        <label for="siteUrl" class="form-label fw-bold"><i class="fa-solid fa-link"></i> Site URL</label>
+                        <input oninput="validationInputs(this , 'msgUrl')" type="url" class="form-control shadow-none" id="siteUrl" placeholder="Website URL">
+                        <p id="msgUrl"  class="text-danger fw-bold d-none">URL must start with http://www.</p>
+                    </div>
+
+                    <button onclick="addSite()" class="btn fw-medium" id="submitBtn">Submit</button>
+
+                </div>
+                <table class="text-center w-100 bg-white">
+                    <th>index</th>
+                    <th>Website Name</th>
+                    <th>Visit</th>
+                    <th>Delete</th>
+
+                    <tbody id="tableBody">
+
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+
+
+
+
+
+
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
