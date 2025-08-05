@@ -32,7 +32,3 @@ You can **add**, **view**, and **delete** bookmarks with real-time **input valid
    - The bookmark is saved to `localStorage`
    - A new bookmark card is displayed in the UI
 4. Each bookmark has a delete button to remove it from both the UI and storage.
-
-
-## 📁 Project Structure
-
